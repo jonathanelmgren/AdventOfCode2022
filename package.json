@@ -1,0 +1,9 @@
+{
+  "type":"module",
+  "devDependencies": {
+    "@types/node": "^18.11.10"
+  },
+  "scripts": {
+    "start":"ts-node "
+  }
+}
