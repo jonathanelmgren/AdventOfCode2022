@@ -74,6 +74,8 @@ const calculateMyPick = (enemyChoice: EnemyChoices, pick: Picks): MyChoices => {
             if (pick === Picks.DRAW) return MyChoices.SCICCORS
     }
 }
+
+// Second param if you wanna run part 2 of day 2 
 const calcSum = (rounds: Array<Round>, secondPart: boolean): number => {
     let sum = 0
     for (const round of rounds) {
