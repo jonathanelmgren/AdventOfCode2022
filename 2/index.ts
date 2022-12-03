@@ -77,7 +77,7 @@ const calculateMyPick = (enemyChoice: EnemyChoices, pick: Picks): MyChoices => {
 const calcSum = (rounds: Array<Round>): number => {
     let sum = 0
     for (const round of rounds) {
-        /* Part 2 */ round.mine = calculateMyPick(round.enemy, round.mine as Picks)
+        /* Part 2. Comment out to get Part 1 results */ //round.mine = calculateMyPick(round.enemy, round.mine as Picks)
 
         sum += getPointsForChoice(round.mine)
         sum += getRoundPoints(round.enemy, round.mine)
