@@ -74,16 +74,18 @@ const calculateMyPick = (enemyChoice: EnemyChoices, pick: Picks): MyChoices => {
             if (pick === Picks.DRAW) return MyChoices.SCICCORS
     }
 }
-const calcSum = (rounds: Array<Round>): number => {
+const calcSum = (rounds: Array<Round>, secondPart: boolean): number => {
     let sum = 0
     for (const round of rounds) {
-        /* Part 2. Comment out to get Part 1 results */ //round.mine = calculateMyPick(round.enemy, round.mine as Picks)
+        if (secondPart) {
+            round.mine = calculateMyPick(round.enemy, round.mine as Picks)
+        }
 
-        sum += getPointsForChoice(round.mine)
-        sum += getRoundPoints(round.enemy, round.mine)
+        sum += getPointsForChoice(round.mine as MyChoices)
+        sum += getRoundPoints(round.enemy, round.mine as MyChoices)
     }
     return sum
 }
 
-console.log(calcSum(rounds))
+console.log(calcSum(rounds, false))
 
