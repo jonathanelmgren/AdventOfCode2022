@@ -4,7 +4,8 @@
         "module": "ESNext",
         "moduleResolution": "Node",
         "sourceMap": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "lib": ["es2021"]
     },
     "ts-node": {
         "esm": true
