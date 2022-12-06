@@ -4,4 +4,5 @@ export const findDuplicateFromStr = (array: Array<string>): string => {
             return str
         }
     }
+    return undefined
 }
